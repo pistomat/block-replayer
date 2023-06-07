@@ -34,7 +34,7 @@ impl BlockReplayer {
     async fn replay_block(
         &self,
         block: Block<Transaction>,
-        interval: U256,
+        _interval: U256,
     ) -> Result<(), ProviderError> {
         for tx in block.transactions {
             info!("Replaying tx with position {:?}", tx.transaction_index);
